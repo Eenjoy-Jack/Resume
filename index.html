@@ -4,9 +4,23 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/Resume/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>简工坊</title>
-    <script type="module" crossorigin src="/Resume/assets/index-Dc2k_vVY.js"></script>
-    <link rel="stylesheet" crossorigin href="/Resume/assets/index-ChFyhUVr.css">
+    <meta name="color-scheme" content="light dark" />
+    <title>简职 · 智能简历工坊</title>
+    <script>
+      (function() {
+        var theme = localStorage.getItem('theme') || 'system';
+        var isDark;
+        if (theme === 'system') {
+          isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        } else {
+          isDark = theme === 'dark';
+        }
+        if (isDark) document.documentElement.classList.add('dark');
+        document.documentElement.style.colorScheme = isDark ? 'dark' : 'light';
+      })()
+    </script>
+    <script type="module" crossorigin src="/Resume/assets/index-aQ1dY-JH.js"></script>
+    <link rel="stylesheet" crossorigin href="/Resume/assets/index-Dw2dHwky.css">
   </head>
   <body>
     <div id="root"></div>
